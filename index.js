@@ -27,11 +27,8 @@ class LaptopDecorator extends Laptop {
         if(laptop instanceof Laptop === false) {
             throw("laptop must be an instance of Laptop")
         }
-        super()
-        this.name = name
+        super(name,description,price)
         this.laptop = laptop;
-        this.description = description;
-        this.price = price;
     }
 
     getDescription() {
@@ -39,7 +36,6 @@ class LaptopDecorator extends Laptop {
     }
 
     totalPrice() {
-    
         return this.laptop.totalPrice() + this.price;
     }
 }
